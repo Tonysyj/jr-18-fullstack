@@ -150,11 +150,6 @@ img {
   color: #181063;
 }
 
-.header img {
-  height: 40px;
-  width: auto;
-}
-
 .intro {
   margin-top: 92px;
   background: #2d3e50;
@@ -395,5 +390,11 @@ img {
 
   .col-sm-6 {
     width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .header .logo img {
+    height: 50px;
+    transform: translateY(4px);
   }
 }
