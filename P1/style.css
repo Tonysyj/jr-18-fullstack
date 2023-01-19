@@ -61,6 +61,11 @@ p {
   letter-spacing: 0.5px;
 }
 
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 .header {
   top: 0;
   background: #8ab5d1;
@@ -88,23 +93,26 @@ p {
 }
 
 .header .logo img {
-  height: 80px;
+  height: 60px;
+  width: auto;
   vertical-align: middle;
 }
 
 .header .toggle {
   background-image: url(./src/img/menu.svg);
   background-size: 35px;
-  background-color: #8ab5d1;
+  background-color: transparent;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-repeat: no-repeat;
   margin-right: 40px;
+  z-index: 100;
 }
 
 .header .toggle.active {
   background-image: url(./src/img/close.svg);
+  z-index: 100;
 }
 
 .header .navBar {
@@ -135,7 +143,7 @@ p {
   color: #fff;
   text-transform: capitalize;
   font-weight: 400;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 
 .header ul li a:hover {
@@ -144,6 +152,7 @@ p {
 
 .header img {
   height: 40px;
+  width: auto;
 }
 
 .intro {
@@ -315,7 +324,7 @@ p {
   margin: 0 30px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .toggle {
     display: none;
   }
@@ -323,7 +332,7 @@ p {
     max-width: 540px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .navBar:not(.active) {
     display: none;
   }
@@ -377,7 +386,7 @@ p {
 }
 @media (min-width: 576px) {
   .container {
-    max-width: 1240px;
+    max-width: 960px;
   }
 
   .col-sm {
